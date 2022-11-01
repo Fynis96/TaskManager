@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema({
   username: {type: String, required: true},
   name: String,
   passwordHash: String,
-  blogs: [
+  tasks: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Task'
