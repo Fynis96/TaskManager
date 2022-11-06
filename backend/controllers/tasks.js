@@ -20,8 +20,8 @@ tasksRouter.get('/:id', async (request, response) => {
 })
 
 tasksRouter.post('/', userExtractor, async (request, response) => {
-  const body = request.body
-  const user = request.user
+  const body = await request.body
+  const user = await request.user
 
   const task = await new Task({
     task: body.task,
@@ -60,8 +60,9 @@ tasksRouter.delete('/:id', userExtractor, async (request, response) => {
   }
 })
 
-tasksRouter.put('/:id', async (request, response) => {
-  const body = request.body
+tasksRouter.put('/:id', userExtractor, async (request, response) => {
+  const user = await request.user
+  const body = await request.body
 
   const task = {
     task: body.task,
