@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useState } from 'react'
 
-function App() {
+const App = () => {
+  // const [tasks, setTasks] = useState([])
+  // const [username, setUsername] = useState('')
+  // const [password, setPassword] = useState('')
+  // const [user, setUser] = useState(null)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,7 +21,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
